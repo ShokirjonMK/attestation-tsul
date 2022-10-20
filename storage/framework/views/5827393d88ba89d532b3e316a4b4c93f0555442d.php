@@ -64,7 +64,7 @@
 
                     <tr>
                         <td><?php echo e($i++); ?></td>
-                        <td><?php echo e($item->question); ?></td>
+                        <td><?php echo e($item->question); ?> <?php if(isset($item->file)): ?> (<?php echo e($item->file); ?>) <?php endif; ?></td>
                         <td><?php echo e($item->type); ?></td>
 
                         <td><?php if($item->status == 1): ?>

@@ -9,7 +9,7 @@ class Question extends Model
 {
 
      public $timestamps = false;
-    protected $fillable = ['question', 'type', 'department_id'];
+    protected $fillable = ['question', 'type', 'department_id', 'file'];
      
     protected $table = 'question';
 

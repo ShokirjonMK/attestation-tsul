@@ -49,7 +49,7 @@
         <div class="pd-20 card-box mb-30" id="noprint">
             <div class="clearfix">
                 <div class="pull-left">
-                    <h4 class="text-blue h4">Таркибий бўлинмани танланг </h4>
+                    <h4 class="text-blue h4">Tarkibiy bo'linmani tanlang </h4>
                 </div>
 
             </div>
@@ -66,8 +66,8 @@
 
                             <select name="department_id" class="custom-select2 form-control" name="state"
                                 style="width: 100%; height: 38px;">
-                                <optgroup label="Таркибий бўлинмани қидириш...">
-                                    <option value="" disabled selected> Таркибий бўлинмани танланг</option>
+                                <optgroup label="Tarkibiy bo'linmani qidirish...">
+                                    <option value="" disabled selected> Tarkibiy bo'linmani tanlang</option>
                                     <?php $__currentLoopData = $department; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $dep_one): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                         <option value="<?php echo e($dep_one->department_id); ?>"><?php echo e($dep_one->name); ?></option>
                                     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
@@ -78,10 +78,10 @@
 
                     <div class="col-md-3">
                         <?php if(isset($data)): ?>
-                            <button type="supmit" disabled class="btn btn-outline-primary w-100">Саволлар шакллантириш
+                            <button type="supmit" disabled class="btn btn-outline-primary w-100">Savol shakllantirish
                             </button>
                         <?php else: ?>
-                            <button type="supmit" class="btn btn-outline-primary w-100">Саволлар шакллантириш</button>
+                            <button type="supmit" class="btn btn-outline-primary w-100">Savol shakllantirish</button>
                         <?php endif; ?>
                     </div>
                 </div>
@@ -101,29 +101,29 @@
                         </div>
                         <div class="col-md-9">
                             <div class="product-detail-desc card-box height-100-p">
-                                <h2 class="pt-5">TOSHKENT DAVLAT YURIDIK UNIVERSITETI</h2>
+                                <h2 class="pt-5" style="text-align: center">TOSHKENT DAVLAT YURIDIK UNIVERSITETI</h2>
                             </div>
                         </div>
                     </div>
 
                     <div class="">
-                        <h3 class="text-blue h4 pt-5" style="font-size: 24px; text-align: center;">Таркибий бўлинма номи:
+                        <h3 class="text-blue h4 pt-5" style="font-size: 24px; text-align: center;">Tarkibiy bo'linma nomi:
                             <?php echo e($dep->name); ?></h3>
                     </div>
                 </div>
                 <div class="clearfix">
                     <div class="">
-                        <h3 class="text-blue h4" style="font-size: 24px; text-align: center;">Саволлар танлови</h3>
+                        <h3 class="text-blue h4" style="font-size: 24px; text-align: center;">Savol tanlovi</h3>
                     </div>
 
                     
                     <!--                <div class="pl-2">-->
                     <!--                    <h3 class="text-blue h4" style="font-size: 24px;">Умумий савол:</h3>-->
                     <!--                </div>-->
-                    <div class="pl-5">
+                    <div class="pl-2">
                         <?php $__currentLoopData = $data; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $main => $questions): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                             <?php $__currentLoopData = $questions; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $main): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                <h4 class="text-blue h4"> <?php echo e($main->question); ?></h4> <br>
+                                <h4 class="text-blue h4"> <?php echo e($main->question); ?> <?php if(isset($main->file)): ?> <img width="450px" src="/question/<?php echo e($main->file); ?>">  <?php endif; ?></h4> <br>
                             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                     </div>
@@ -137,9 +137,9 @@
                             _______________________________________________ <br>
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             &nbsp;&nbsp;&nbsp;&nbsp;
-                            Номзод Ф.И.О
+                            Nomzod F.I.O
                         </div>
-                        <div class="col-md-2"> _______________ <br> &nbsp;&nbsp;&nbsp;&nbsp; ( имзо )</div>
+                        <div class="col-md-2"> _______________ <br> &nbsp;&nbsp;&nbsp;&nbsp; ( imzo )</div>
                     </div>
                 </div>
             </div>

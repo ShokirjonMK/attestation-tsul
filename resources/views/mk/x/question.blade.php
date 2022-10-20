@@ -64,7 +64,7 @@
 
                     <tr>
                         <td>{{$i++}}</td>
-                        <td>{{$item->question}}</td>
+                        <td>{{$item->question}} @isset($item->file) ({{$item->file}}) @endisset</td>
                         <td>{{$item->type}}</td>
 
                         <td>@if ($item->status == 1)

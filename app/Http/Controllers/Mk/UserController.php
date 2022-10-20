@@ -32,7 +32,7 @@ class UserController extends Controller
             return back()->with('validate', 'a');
         }
 
-        $user = User::where('role', '!=', 111)->get();
+        $user = User::where('role', '!=', 111)->orderBy('id', 'DESC')->get();
 
 //        return $user;
         return view('mk.pages.user.index', [

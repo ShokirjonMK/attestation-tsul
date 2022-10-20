@@ -49,7 +49,7 @@
         <div class="pd-20 card-box mb-30" id="noprint">
             <div class="clearfix">
                 <div class="pull-left">
-                    <h4 class="text-blue h4">Таркибий бўлинмани танланг </h4>
+                    <h4 class="text-blue h4">Tarkibiy bo'linmani tanlang </h4>
                 </div>
 
             </div>
@@ -66,8 +66,8 @@
 
                             <select name="department_id" class="custom-select2 form-control" name="state"
                                 style="width: 100%; height: 38px;">
-                                <optgroup label="Таркибий бўлинмани қидириш...">
-                                    <option value="" disabled selected> Таркибий бўлинмани танланг</option>
+                                <optgroup label="Tarkibiy bo'linmani qidirish...">
+                                    <option value="" disabled selected> Tarkibiy bo'linmani tanlang</option>
                                     @foreach ($department as $dep_one)
                                         <option value="{{ $dep_one->department_id }}">{{ $dep_one->name }}</option>
                                     @endforeach
@@ -78,10 +78,10 @@
 
                     <div class="col-md-3">
                         @isset($data)
-                            <button type="supmit" disabled class="btn btn-outline-primary w-100">Саволлар шакллантириш
+                            <button type="supmit" disabled class="btn btn-outline-primary w-100">Savol shakllantirish
                             </button>
                         @else
-                            <button type="supmit" class="btn btn-outline-primary w-100">Саволлар шакллантириш</button>
+                            <button type="supmit" class="btn btn-outline-primary w-100">Savol shakllantirish</button>
                         @endisset
                     </div>
                 </div>
@@ -101,29 +101,29 @@
                         </div>
                         <div class="col-md-9">
                             <div class="product-detail-desc card-box height-100-p">
-                                <h2 class="pt-5">TOSHKENT DAVLAT YURIDIK UNIVERSITETI</h2>
+                                <h2 class="pt-5" style="text-align: center">TOSHKENT DAVLAT YURIDIK UNIVERSITETI</h2>
                             </div>
                         </div>
                     </div>
 
                     <div class="">
-                        <h3 class="text-blue h4 pt-5" style="font-size: 24px; text-align: center;">Таркибий бўлинма номи:
+                        <h3 class="text-blue h4 pt-5" style="font-size: 24px; text-align: center;">Tarkibiy bo'linma nomi:
                             {{ $dep->name }}</h3>
                     </div>
                 </div>
                 <div class="clearfix">
                     <div class="">
-                        <h3 class="text-blue h4" style="font-size: 24px; text-align: center;">Саволлар танлови</h3>
+                        <h3 class="text-blue h4" style="font-size: 24px; text-align: center;">Savol tanlovi</h3>
                     </div>
 
                     {{-- @isset($data['main']) --}}
                     <!--                <div class="pl-2">-->
                     <!--                    <h3 class="text-blue h4" style="font-size: 24px;">Умумий савол:</h3>-->
                     <!--                </div>-->
-                    <div class="pl-5">
+                    <div class="pl-2">
                         @foreach ($data as $main => $questions)
                             @foreach ($questions as $main)
-                                <h4 class="text-blue h4"> {{ $main->question }}</h4> <br>
+                                <h4 class="text-blue h4"> {{ $main->question }} @isset($main->file) <img width="450px" src="/question/{{$main->file}}">  @endisset</h4> <br>
                             @endforeach
                         @endforeach
                     </div>
@@ -137,9 +137,9 @@
                             _______________________________________________ <br>
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             &nbsp;&nbsp;&nbsp;&nbsp;
-                            Номзод Ф.И.О
+                            Nomzod F.I.O
                         </div>
-                        <div class="col-md-2"> _______________ <br> &nbsp;&nbsp;&nbsp;&nbsp; ( имзо )</div>
+                        <div class="col-md-2"> _______________ <br> &nbsp;&nbsp;&nbsp;&nbsp; ( imzo )</div>
                     </div>
                 </div>
             </div>
