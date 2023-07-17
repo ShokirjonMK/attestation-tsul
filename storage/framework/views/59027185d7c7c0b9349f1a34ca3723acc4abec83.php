@@ -123,7 +123,7 @@
                     <div class="pl-2">
                         <?php $__currentLoopData = $data; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $main => $questions): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                             <?php $__currentLoopData = $questions; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $main): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                <h4 class="text-blue h4"> <?php echo e($main->question); ?> <?php if(isset($main->file)): ?> <img width="450px" src="/question/<?php echo e($main->file); ?>">  <?php endif; ?></h4> <br>
+                                <h4 class="text-blue h4"> <?php echo e($main->question); ?> <?php if(isset($main->file)): ?> <img width="450px" src="/question/<?php echo e($main->department_id); ?>/<?php echo e($main->file); ?>">  <?php endif; ?></h4> <br>
                             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                     </div>

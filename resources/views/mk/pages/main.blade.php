@@ -123,7 +123,7 @@
                     <div class="pl-2">
                         @foreach ($data as $main => $questions)
                             @foreach ($questions as $main)
-                                <h4 class="text-blue h4"> {{ $main->question }} @isset($main->file) <img width="450px" src="/question/{{$main->file}}">  @endisset</h4> <br>
+                                <h4 class="text-blue h4"> {{ $main->question }} @isset($main->file) <img width="450px" src="/question/{{$main->department_id}}/{{$main->file}}">  @endisset</h4> <br>
                             @endforeach
                         @endforeach
                     </div>
